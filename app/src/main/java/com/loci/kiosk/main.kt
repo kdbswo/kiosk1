@@ -10,8 +10,7 @@ fun main() {
     }
     while (true) {
 
-        val food = Food()
-        food.displayInfo()
+        menuList[0].displayInfo()
 
         try {
 
@@ -24,8 +23,8 @@ fun main() {
 
                 1 -> {
                     while (true) {
-                        val burger = Burger()
-                        burger.displayInfo()
+
+                        menuList[1].displayInfo()
 
                         try {
                             val input1 = readln().toInt()
@@ -33,28 +32,26 @@ fun main() {
                             when (input1) {
                                 0 -> break
                                 1 -> {
-                                    val shackBurger = ShackBurger("ShackBurger", 6900)
-                                    shackBurger.displayInfo()
+                                    menuList[5].displayInfo()
                                 }
 
                                 2 -> {
-                                    val shackBurger = ShackBurger("SmokeShack", 8900)
-                                    shackBurger.displayInfo()
+                                    menuList[6].displayInfo()
                                 }
 
                                 3 -> {
-                                    val shackBurger = ShackBurger("Shroom Burger", 9400)
-                                    shackBurger.displayInfo()
+                                    menuList[7].displayInfo()
+
                                 }
 
                                 4 -> {
-                                    val shackBurger = ShackBurger("Cheeseburger", 6900)
-                                    shackBurger.displayInfo()
+                                    menuList[8].displayInfo()
+
                                 }
 
                                 5 -> {
-                                    val shackBurger = ShackBurger("Hamburger", 5400)
-                                    shackBurger.displayInfo()
+                                    menuList[9].displayInfo()
+
                                 }
 
                                 else -> println("유효한 숫자를 입력해 주세요.")
@@ -70,8 +67,7 @@ fun main() {
                 2 -> {
                     while (true) {
 
-                        val forzenCustard = ForzenCustard()
-                        forzenCustard.displayInfo()
+                        menuList[2].displayInfo()
 
                         try {
                             val input1 = readln().toInt()
@@ -79,33 +75,28 @@ fun main() {
                             when (input1) {
                                 0 -> break
                                 1 -> {
-                                    val shackForzenCustard =
-                                        ShackForzenCustard("Frozen Custard1", 6900)
-                                    shackForzenCustard.displayInfo()
+                                    menuList[10].displayInfo()
+
                                 }
 
                                 2 -> {
-                                    val shackForzenCustard =
-                                        ShackForzenCustard("Frozen Custard2", 8900)
-                                    shackForzenCustard.displayInfo()
+                                    menuList[11].displayInfo()
+
                                 }
 
                                 3 -> {
-                                    val shackForzenCustard =
-                                        ShackForzenCustard("Frozen Custard3", 9400)
-                                    shackForzenCustard.displayInfo()
+                                    menuList[12].displayInfo()
+
                                 }
 
                                 4 -> {
-                                    val shackForzenCustard =
-                                        ShackForzenCustard("Frozen Custard4", 6900)
-                                    shackForzenCustard.displayInfo()
+                                    menuList[13].displayInfo()
+
                                 }
 
                                 5 -> {
-                                    val shackForzenCustard =
-                                        ShackForzenCustard("Frozen Custard5", 5400)
-                                    shackForzenCustard.displayInfo()
+                                    menuList[14].displayInfo()
+
                                 }
 
                                 else -> println("유효한 숫자를 입력해 주세요")
@@ -121,8 +112,8 @@ fun main() {
                 3 -> {
                     while (true) {
 
-                        val drinks = Drinks()
-                        drinks.displayInfo()
+                        menuList[3].displayInfo()
+
 
                         try {
                             val input1 = readln().toInt()
@@ -130,28 +121,27 @@ fun main() {
                             when (input1) {
                                 0 -> break
                                 1 -> {
-                                    val shackDrinks = ShackDrinks("Drink1", 6900)
-                                    shackDrinks.displayInfo()
+                                    menuList[15].displayInfo()
                                 }
 
                                 2 -> {
-                                    val shackDrinks = ShackDrinks("Drink2", 8900)
-                                    shackDrinks.displayInfo()
+                                    menuList[16].displayInfo()
+
                                 }
 
                                 3 -> {
-                                    val shackDrinks = ShackDrinks("Drink3", 1500)
-                                    shackDrinks.displayInfo()
+                                    menuList[17].displayInfo()
+
                                 }
 
                                 4 -> {
-                                    val shackDrinks = ShackDrinks("Drink4", 5600)
-                                    shackDrinks.displayInfo()
+                                    menuList[18].displayInfo()
+
                                 }
 
                                 5 -> {
-                                    val shackDrinks = ShackDrinks("Drink5", 7600)
-                                    shackDrinks.displayInfo()
+                                    menuList[19].displayInfo()
+
                                 }
 
                                 else -> println("유효한 숫자를 입력해 주세요")
@@ -166,8 +156,8 @@ fun main() {
                 4 -> {
                     while (true) {
 
-                        val beer = Beer()
-                        beer.displayInfo()
+                        menuList[4].displayInfo()
+
 
                         try {
                             val input1 = readln().toInt()
@@ -175,28 +165,28 @@ fun main() {
                             when (input1) {
                                 0 -> break
                                 1 -> {
-                                    val shackBeer = ShackBeer("Beer1", 6900)
-                                    shackBeer.displayInfo()
+                                    menuList[20].displayInfo()
+
                                 }
 
                                 2 -> {
-                                    val shackBeer = ShackBeer("Beer2", 1300)
-                                    shackBeer.displayInfo()
+                                    menuList[21].displayInfo()
+
                                 }
 
                                 3 -> {
-                                    val shackBeer = ShackBeer("Beer3", 5300)
-                                    shackBeer.displayInfo()
+                                    menuList[22].displayInfo()
+
                                 }
 
                                 4 -> {
-                                    val shackBeer = ShackBeer("Beer4", 2200)
-                                    shackBeer.displayInfo()
+                                    menuList[23].displayInfo()
+
                                 }
 
                                 5 -> {
-                                    val shackBeer = ShackBeer("Beer5", 9500)
-                                    shackBeer.displayInfo()
+                                    menuList[24].displayInfo()
+
                                 }
 
                                 else -> println("유효한 숫자를 입력해 주세요")
@@ -220,6 +210,11 @@ fun main() {
 }
 
 fun init() {
+    menuList.add(Food())
+    menuList.add(Burger())
+    menuList.add(ForzenCustard())
+    menuList.add(Drinks())
+    menuList.add(Beer())
     menuList.add(ShackBurger("ShackBurger",6900))
     menuList.add(ShackBurger("SmokeShack",8900))
     menuList.add(ShackBurger("Shroom Burger",9400))
@@ -240,6 +235,8 @@ fun init() {
     menuList.add(ShackBeer("Beer3",9400))
     menuList.add(ShackBeer("Beer4",6900))
     menuList.add(ShackBeer("Beer5",5400))
+
+
 }
 
 
