@@ -8,7 +8,9 @@ class ShackBeer(input1: String, input2: Int) : Burger() {
     override fun displayInfo() {
         println("${price}원의 ${name} 선택됨")
     }
-    fun shackFunction1(){
+
+    fun shackFunction1() {
 
     }
+
 }

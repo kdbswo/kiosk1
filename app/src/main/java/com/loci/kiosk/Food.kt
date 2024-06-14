@@ -12,4 +12,12 @@ open class Food {
         println("4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주")
         println("0. 종료            | 프로그램 종료")
     }
+
+    fun compareMoney(money: Int){
+        if (money >= price){
+            println("${name}을 구매하기 위한 잔액이 충분합니다.")
+        } else {
+            println("${name}을 구매하기 위한 잔액이 ${price - money}원 부족합니다.")
+        }
+    }
 }
