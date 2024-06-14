@@ -4,10 +4,6 @@ var menuList = ArrayList<Food>()
 
 fun main() {
     init()
-    menuList.forEach{
-        print(it.name)
-        println(it.price)
-    }
     while (true) {
 
         menuList[0].displayInfo()
