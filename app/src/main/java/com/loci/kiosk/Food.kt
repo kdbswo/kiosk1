@@ -1,6 +1,9 @@
 package com.loci.kiosk
 
 open class Food {
+    var name: String = ""
+    var price: Int = 0
+
     open fun displayInfo(){
         println("[SHAKESHACK MENU]")
         println("1. Burgers         | 앵거스 비프 통살을 다져만든 버거")

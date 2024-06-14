@@ -3,8 +3,11 @@ package com.loci.kiosk
 var menuList = ArrayList<Food>()
 
 fun main() {
-//    init()
-
+    init()
+    menuList.forEach{
+        print(it.name)
+        println(it.price)
+    }
     while (true) {
 
         val food = Food()
@@ -216,6 +219,28 @@ fun main() {
 
 }
 
+fun init() {
+    menuList.add(ShackBurger("ShackBurger",6900))
+    menuList.add(ShackBurger("SmokeShack",8900))
+    menuList.add(ShackBurger("Shroom Burger",9400))
+    menuList.add(ShackBurger("Cheeseburger",6900))
+    menuList.add(ShackBurger("Hamburger",5400))
+    menuList.add(ShackForzenCustard("ForzenCustard1",6900))
+    menuList.add(ShackForzenCustard("ForzenCustard2",8900))
+    menuList.add(ShackForzenCustard("ForzenCustard3",9400))
+    menuList.add(ShackForzenCustard("ForzenCustard4",6900))
+    menuList.add(ShackForzenCustard("ForzenCustard5",5400))
+    menuList.add(ShackDrinks("Drinks1",6900))
+    menuList.add(ShackDrinks("Drinks2",8900))
+    menuList.add(ShackDrinks("Drinks3",9400))
+    menuList.add(ShackDrinks("Drinks4",6900))
+    menuList.add(ShackDrinks("Drinks5",5400))
+    menuList.add(ShackBeer("Beer1",6900))
+    menuList.add(ShackBeer("Beer2",8900))
+    menuList.add(ShackBeer("Beer3",9400))
+    menuList.add(ShackBeer("Beer4",6900))
+    menuList.add(ShackBeer("Beer5",5400))
+}
 
 
 

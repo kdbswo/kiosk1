@@ -1,12 +1,16 @@
 package com.loci.kiosk
 
-class ShackBurger(name: String, price: Int) : Burger() {
-    private val _name = name
-    private val _price = price
-    override fun displayInfo() {
-        println("${_price}원의 ${_name} 선택됨")
+class ShackBurger(input1: String, input2: Int) : Burger() {
+    init {
+        name = input1
+        price = input2
     }
-    fun shackFunction1(){
+
+    override fun displayInfo() {
+        println("${name}원의 ${price} 선택됨")
+    }
+
+    fun shackFunction1() {
 
     }
 }
