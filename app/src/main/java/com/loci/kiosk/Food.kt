@@ -10,6 +10,7 @@ open class Food {
         println("2. Frozen Custard  | 매장에서 신선하게 만드는 아이스크림")
         println("3. Drinks          | 매장에서 직접 만드는 음료")
         println("4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주")
+        println("5. 주문            |  주문하기")
         println("0. 종료            | 프로그램 종료")
     }
 

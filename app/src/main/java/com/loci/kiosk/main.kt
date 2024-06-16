@@ -1,6 +1,10 @@
 package com.loci.kiosk
 
+import java.text.SimpleDateFormat
+import java.util.Date
+
 var menuList = ArrayList<Food>()
+var orderList = ArrayList<Food>()
 
 fun main() {
     init()
@@ -20,7 +24,7 @@ fun main() {
             println("입력 금액: ${inputMoney}원")
             break
         }
-    } catch (e: NumberFormatException){
+    } catch (e: NumberFormatException) {
         println("0이상 1000000이하의 숫자를 입력해주세용")
     }
 
@@ -52,30 +56,34 @@ fun main() {
                                 1 -> {
                                     menuList[5].displayInfo()
                                     menuList[5].compareMoney(inputMoney)
-
+                                    orderList.add(menuList[5])
                                 }
 
                                 2 -> {
                                     menuList[6].displayInfo()
                                     menuList[6].compareMoney(inputMoney)
+                                    orderList.add(menuList[6])
 
                                 }
 
                                 3 -> {
                                     menuList[7].displayInfo()
                                     menuList[7].compareMoney(inputMoney)
+                                    orderList.add(menuList[7])
 
                                 }
 
                                 4 -> {
                                     menuList[8].displayInfo()
                                     menuList[8].compareMoney(inputMoney)
+                                    orderList.add(menuList[8])
 
                                 }
 
                                 5 -> {
                                     menuList[9].displayInfo()
                                     menuList[9].compareMoney(inputMoney)
+                                    orderList.add(menuList[9])
 
                                 }
 
@@ -102,30 +110,35 @@ fun main() {
                                 1 -> {
                                     menuList[10].displayInfo()
                                     menuList[10].compareMoney(inputMoney)
+                                    orderList.add(menuList[10])
 
                                 }
 
                                 2 -> {
                                     menuList[11].displayInfo()
                                     menuList[11].compareMoney(inputMoney)
+                                    orderList.add(menuList[11])
 
                                 }
 
                                 3 -> {
                                     menuList[12].displayInfo()
                                     menuList[12].compareMoney(inputMoney)
+                                    orderList.add(menuList[12])
 
                                 }
 
                                 4 -> {
                                     menuList[13].displayInfo()
                                     menuList[13].compareMoney(inputMoney)
+                                    orderList.add(menuList[13])
 
                                 }
 
                                 5 -> {
                                     menuList[14].displayInfo()
                                     menuList[14].compareMoney(inputMoney)
+                                    orderList.add(menuList[14])
 
                                 }
 
@@ -153,30 +166,35 @@ fun main() {
                                 1 -> {
                                     menuList[15].displayInfo()
                                     menuList[15].compareMoney(inputMoney)
+                                    orderList.add(menuList[15])
 
                                 }
 
                                 2 -> {
                                     menuList[16].displayInfo()
                                     menuList[16].compareMoney(inputMoney)
+                                    orderList.add(menuList[16])
 
                                 }
 
                                 3 -> {
                                     menuList[17].displayInfo()
                                     menuList[17].compareMoney(inputMoney)
+                                    orderList.add(menuList[17])
 
                                 }
 
                                 4 -> {
                                     menuList[18].displayInfo()
                                     menuList[18].compareMoney(inputMoney)
+                                    orderList.add(menuList[18])
 
                                 }
 
                                 5 -> {
                                     menuList[19].displayInfo()
                                     menuList[19].compareMoney(inputMoney)
+                                    orderList.add(menuList[19])
 
                                 }
 
@@ -203,30 +221,35 @@ fun main() {
                                 1 -> {
                                     menuList[20].displayInfo()
                                     menuList[20].compareMoney(inputMoney)
+                                    orderList.add(menuList[20])
 
                                 }
 
                                 2 -> {
                                     menuList[21].displayInfo()
                                     menuList[21].compareMoney(inputMoney)
+                                    orderList.add(menuList[21])
 
                                 }
 
                                 3 -> {
                                     menuList[22].displayInfo()
                                     menuList[22].compareMoney(inputMoney)
+                                    orderList.add(menuList[22])
 
                                 }
 
                                 4 -> {
                                     menuList[23].displayInfo()
                                     menuList[23].compareMoney(inputMoney)
+                                    orderList.add(menuList[23])
 
                                 }
 
                                 5 -> {
                                     menuList[24].displayInfo()
                                     menuList[24].compareMoney(inputMoney)
+                                    orderList.add(menuList[24])
 
                                 }
 
@@ -238,6 +261,33 @@ fun main() {
                         }
 
                     }
+                }
+
+                5 -> {
+                    println("아래와 같이 주문하시겠습니까?")
+                    println("[ Orders ]")
+
+                    for (i in orderList) {
+                        println("${i.name} : ${i.price}원")
+                    }
+
+                    println("[ Total ]")
+
+                    println("1. 주문    2. 메뉴판")
+                    val orderInput = readln().toInt()
+                    when (orderInput) {
+                        1 -> {
+                            val now = SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(getTime()).time
+
+                            println(
+                                "결제를 완료했습니다. (${now})"
+                            )
+                        }
+
+                        2 -> {}
+                    }
+
+
                 }
 
                 else -> println("유효한 숫자를 입력해주세요")
@@ -276,12 +326,18 @@ fun init() {
     menuList.add(ShackBeer("Beer3", 9400))
     menuList.add(ShackBeer("Beer4", 6900))
     menuList.add(ShackBeer("Beer5", 5400))
-
-
 }
 
+fun getTime(): String {
 
+    var now = System.currentTimeMillis()
+    var date = Date(now)
 
+    var dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    var getTime = dateFormat.format(date)
+
+    return getTime
+}
 
 
 
